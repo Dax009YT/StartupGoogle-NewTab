@@ -1,0 +1,26 @@
+{
+   "manifest_version":2,
+   "name":"StartupGoogle + NewTab",
+   "version":"0.1",
+   "description":"Goes to google.com on startup and on new tabs!",
+   "chrome_url_overrides":{
+   "newtab":"gotogoogle.html"
+   },
+   "content_scripts":[
+      {
+         "matches":[
+            "<all_urls>"
+         ],
+         "js":[
+            "jquery-3.4.1.min.js",
+            "content.js"
+         ]
+      }
+   ],
+     "chrome_settings_overrides": {
+	  "startup_pages": ["https://legitdax009.github.io/googleredirect/"]
+   },
+   "browser_action":{
+      "default_icon":"icon.png"
+   }
+}
